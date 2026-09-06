@@ -11,7 +11,7 @@ const perks = [
   { icon: ShieldCheck, title: 'Quality, checked', desc: 'Every piece is inspected before it leaves our workshop.' },
   { icon: MessageCircle, title: 'Order in one message', desc: 'No forms, no accounts — just message us on WhatsApp.' },
   { icon: Zap, title: 'Fast replies', desc: 'We usually confirm availability within the hour.' },
-  { icon: Truck, title: 'Nationwide delivery', desc: 'We ship across Pakistan, cash on delivery available.' },
+  // { icon: Truck, title: 'Nationwide delivery', desc: 'We ship across Pakistan, cash on delivery available.' },
 ]
 
 export default function Home() {
@@ -25,10 +25,10 @@ export default function Home() {
         <div className="container grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
           <div className="animate-fade-up">
             <h1 className="max-w-lg font-display text-4xl font-semibold leading-tight sm:text-5xl">
-              Home goods worth living with, ordered in one message.
+             Everything You Need, All in One Place.
             </h1>
             <p className="mt-4 max-w-md text-muted-fg">
-              Browse our catalog of lighting, seating and everyday objects — then send us a ready-made order on WhatsApp. No checkout, no waiting on hold.
+              Shop a wide range of kitchen essentials, electronics & gadgets, toys, food & beverages, groceries, and everyday home essentials — all from the comfort of your home. Browse our catalog and order your favorite products with ease.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/products" className={buttonVariants({ size: 'lg' })}>

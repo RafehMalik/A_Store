@@ -5,11 +5,12 @@ import { Button } from '../components/ui/Button'
 import { sampleStoreSettings } from '../lib/sampleData'
 import { getWhatsAppGeneralUrl } from '../lib/whatsapp'
 import { useToast } from '../components/ui/Toast'
+import { useStoreSettings } from '../hooks/useStoreSettings'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const { push } = useToast()
-  const settings = sampleStoreSettings
+  const settings = useStoreSettings()
 
   function handleSubmit(e) {
     e.preventDefault()

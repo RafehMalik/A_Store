@@ -1,9 +1,9 @@
 import { ShieldCheck, Leaf, Handshake } from 'lucide-react'
 
 const values = [
-  { icon: Leaf, title: 'Thoughtfully sourced', desc: 'We work with small workshops and favour natural materials over mass production.' },
-  { icon: ShieldCheck, title: 'Built to last', desc: 'Every product is checked for quality before it goes into the catalog.' },
-  { icon: Handshake, title: 'Real conversations', desc: 'No bots, no forms — you talk to an actual person before you order.' },
+  { icon: Leaf, title: 'Simple Shopping', desc: 'Browse our catalog, find a product you like, and get in touch with us directly to place your order.' },
+  { icon: ShieldCheck, title: 'A Variety You Can Trust', desc: 'We bring multiple everyday product categories together so you can find more of what you need in one place.' },
+  { icon: Handshake, title: 'Convenient Ordering', desc: 'No complicated checkout process. Simply choose your product and contact us through WhatsApp to confirm your order.' },
 ]
 
 export default function About() {
@@ -12,10 +12,10 @@ export default function About() {
       <section className="border-b border-border bg-surface">
         <div className="container py-14">
           <h1 className="max-w-xl font-display text-3xl font-semibold sm:text-4xl">
-            A small catalog, chosen carefully.
+            Everything You Need, All in One Place.
           </h1>
           <p className="mt-4 max-w-lg text-muted-fg">
-            Aurelia House started as a way to bring considered, well-made home goods to people who are tired of scrolling through endless marketplace listings. We keep the catalog small on purpose — everything in it is something we'd use ourselves.
+            We created A-Store to make everyday shopping simple and convenient. From kitchen essentials and household products to electronics, toys, groceries, food and beverages. Whether you're looking for something for your home, something for the kids, a useful gadget, or everyday grocery essentials, our goal is to help you find what you need without the hassle.
           </p>
         </div>
       </section>
