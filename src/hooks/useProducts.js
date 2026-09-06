@@ -28,9 +28,17 @@ export function useProducts({ categorySlug, search, sort, onlyFeatured } = {}) {
         return
       }
 
+      // Filtering on an *embedded* table's column (category.slug) only
+      // restricts which rows come back if the embed is an inner join —
+      // otherwise PostgREST just nulls out the embed for non-matching rows
+      // and still returns every product, which is why this looked like it
+      // "sometimes" worked. The !inner hint makes the .eq() below actually
+      // filter the products themselves.
+      const categoryEmbed = categorySlug ? 'category:categories!inner(id, name, slug)' : 'category:categories(id, name, slug)'
+
       let query = supabase
         .from('products')
-        .select('*, category:categories(id, name, slug)')
+        .select(`*, ${categoryEmbed}`)
         .eq('is_available', true)
 
       if (categorySlug) query = query.eq('category.slug', categorySlug)
